@@ -17,9 +17,9 @@ export class MainComponent implements OnInit {
 
 
   click(): void {
-    this.httpClient.get('/api/function?name=test').subscribe(result =>
+    this.httpClient.get<any>('/api/function?name=test').subscribe(result =>
       {
-          this.resultApi = result.toString();
+          this.resultApi = result?.message?.toString();
       });
   }
 }
