@@ -1,4 +1,13 @@
-<p>main-component works! Let's see what we get when you click the button</p>
-<button class="button" (click)="click()">Click ME</button>
-<p>The result: <strong>{{ this.resultApi }}</strong></p>
-
+<div class="container">
+  <div class="jumbotron">
+    <h1>Azure Static Web App</h1>
+    <p>Conclusion: Is really nice!!!!!</p>
+  </div>
+  <div class="row">
+      <div class="col-md-12">
+          <p>Let's see what we get when you click the button</p>
+          <button class="btn btn-primary" (click)="click()">Click ME</button>
+          <p *ngIf="this.resultApi">The result: <strong>{{ this.resultApi }}</strong></p>
+      </div>
+  </div>
+</div>
